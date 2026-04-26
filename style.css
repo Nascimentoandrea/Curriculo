@@ -1,0 +1,65 @@
+/*Style.css*/
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: black;
+    color: #5757c9;
+    margin: 0;
+    padding: 0;
+}
+ .container {
+    display: flex;
+    flex-direction: column;
+    min-width: 100vh
+ }
+
+ /*Barra lateral*/
+.sidebar {
+    width: 30%;
+    background-image: -o-linear-gradient();
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
+    padding: 20px;
+    box-sizing: border-box;
+}
+.sidebar h2 , .sidebar h3{
+    margin-top: 0;
+    font-size: 24px;
+    color: #5757c9;
+}
+.sidebar p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #5757c9;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.skills li {
+    background: #5757c9;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+
+}
+
+/*Conteúdo principal*/
+.main-content {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-content h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #5757c9;
+}
