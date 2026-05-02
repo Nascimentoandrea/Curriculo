@@ -63,3 +63,18 @@ body {
     font-size: 28px;
     color: #5757c9;
 }
+/*imgem do perfil, no canto superior direito */
+.profile-picture img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%; /* Deixa a imagem circular */
+    border: #5757c9;
+    display: block;
+    margin-left: auto; /* Alinha a imagem à direita */
+}
+
+    
+    
+
+    
