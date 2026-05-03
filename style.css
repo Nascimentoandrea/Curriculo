@@ -64,14 +64,42 @@ body {
     color: #5757c9;
 }
 /*imgem do perfil, no canto superior direito */
+.profile-picture {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    height: 150px;
+}
 .profile-picture img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
     border-radius: 50%; /* Deixa a imagem circular */
     border: #5757c9;
     display: block;
     margin-left: auto; /* Alinha a imagem à direita */
+    
+}
+.cat {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  animation: walk 8s linear infinite alternate; /* vai e volta */
+}
+
+.cat img {
+  width: 120px;
+}
+
+/* Animação */
+@keyframes walk {
+  0% { left: 0; }
+  100% { left: calc(100% - 120px); } /* atravessa até o outro lado */
+}
+a {
+  color: #5757c9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline; /* aparece só no hover */
 }
 
     
