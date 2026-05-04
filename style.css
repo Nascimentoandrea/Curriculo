@@ -82,23 +82,36 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  animation: walk 8s linear infinite alternate; /* vai e volta */
+  animation: walk 8s ease-in-out infinite alternate; /* vai e volta */
 }
 
 .cat img {
   width: 120px;
+  
 }
 
 /* Animação */
 @keyframes walk {
-  0% { left: 0; }
-  100% { left: calc(100% - 120px); } /* atravessa até o outro lado */
+  0% {
+     left: 0; 
+     transform: scaleX(1) translateY(0); /* inverte a imagem horizontalmente */
+  }
+  50% {
+     left: calc(50% - 60px); /* atravessa até o meio */
+     transform: scaleX(-1) translateY(-5px); /* normal e levanta um pouco */
+  }
+  100% {
+     left: calc(100% - 120px); } /* atravessa até o outro lado */
+     transform: scaleX(-1) translateY(0); /* normal */
+  }
+  
 }
 a {
   color: #5757c9;
   text-decoration: none;
 }
 a:hover {
+  transform: scaleX(-1); /* inverte a imagem horizontalmente */
   text-decoration: underline; /* aparece só no hover */
 }
 
