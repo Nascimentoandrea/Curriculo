@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="style.css">    
 </head>
 <body>
-   <div audio>
-    <audio autoplay loop style="display: none;">
+    <audio id="musica" loop>
       <source src="audio/solarflex-background-music-515493.mp3" type="audio/mp3">
-      Seu navegador não suporta o elemento de áudio.
     </audio>
+    <button id="play">Tocar Música</button>
+    <button id="pause">Pausar Música</button>
 
   
  <div class = "profile-picture">
     <img src="img/Andy5..png" alt="Foto de Perfil">
   </div>
-    <h1>Currículo de Andréa Nascimento da Silva Santos</h1>
+    <h1>Meu Currículo</h1>
   <div class ="container">
     <!--Barra Lateral-->
     <aside class="sidebar">
@@ -91,5 +91,20 @@
   <div class="cat">
     <img src="https://cdnl.iconscout.com/lottie/premium/thumb/gato-paseando-vista-lateral-10210900-8329111.gif" alt="Gato Animado" class="gato">
   </div>
+  <script>
+    const audio = document.getElementById('musica');
+    let isPlaying = false;
+
+    document.addEventListener('click',() => {
+      if (!isPlaying) {
+          audio.play();
+          isPlaying = true;
+        }
+      else   {
+          audio.pause();
+          isPlaying = false;
+        }
+      });
+  </script>
 </body>
 </html>
