@@ -72,10 +72,13 @@ body {
     height: 150px;
 }
 .profile-picture img {
+    width: 300px;
+    height:400px;
     border-radius: 50%; /* Deixa a imagem circular */
     border: #5757c9;
     display: block;
-    margin-left: auto; /* Alinha a imagem à direita */
+    margin-right: auto; /* Espaço entre a imagem e o conteúdo */
+    margin-left: auto;/* Alinha a imagem à direita */
     
 }
 .cat {
@@ -101,11 +104,11 @@ body {
      transform: scaleX(-1) translateY(-5px); /* normal e levanta um pouco */
   }
   100% {
-     left: calc(100% - 120px); } /* atravessa até o outro lado */
-     transform: scaleX(-1) translateY(0); /* normal */
+     left: calc(100% - 120px);  /* atravessa até o outro lado */
+     transform: scaleX(-1) translateY(0);} /* normal */
   }
   
-}
+
 a {
   color: #800ecc;
   text-decoration: none;
