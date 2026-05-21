@@ -9,6 +9,7 @@ body {
  .container {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     min-width: 100vh
  }
 
