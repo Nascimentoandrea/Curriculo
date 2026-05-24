@@ -1,5 +1,6 @@
 /*Style.css*/
 body {
+    font-size: 1rem;
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: black;
     color: #5757c9;
@@ -10,12 +11,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-width: 100vh
+    min-height: 100vh
  }
 
+ /*Layout padrão para desktop / Tablet grande */
+ .wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+ }
  /*Barra lateral*/
 .sidebar {
     width: 30%;
+    min-width: 240px;
     background-image: -o-linear-gradient();
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
     padding: 20px;
@@ -23,7 +31,7 @@ body {
 }
 .sidebar h2 , .sidebar h3{
     margin-top: 0;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #5757c9;
 }
 .sidebar p {
@@ -55,7 +63,6 @@ body {
 /*Conteúdo principal*/
 .main-content {
     width: 70%;
-    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -64,17 +71,21 @@ body {
     font-size: 28px;
     color: #5757c9;
 }
+.image {
+    max-width: 100%;
+    height: auto;
+}
 /*imgem do perfil, no canto superior direito */
 .profile-picture {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 150px;
-    height: 150px;
+    width: auto;
+    height: auto;
 }
 .profile-picture img {
     width: 300px;
-    height:400px;
+    height:auto;
     border-radius: 50%; /* Deixa a imagem circular */
     border: #5757c9;
     display: block;
@@ -90,8 +101,8 @@ body {
 }
 
 .cat img {
-  width: 120px;
-  
+  max-width: 100%;
+  height: auto;
 }
 
 /* Animação */
@@ -106,9 +117,10 @@ body {
   }
   100% {
      left: calc(100% - 120px);  /* atravessa até o outro lado */
-     transform: scaleX(-1) translateY(0);} /* normal */
+     transform: scaleX(-1) translateY(0)
+    /* normal */
   }
-  
+}
 
 a {
   color: #800ecc;
@@ -119,7 +131,65 @@ a:hover {
   text-decoration: underline; /* aparece só no hover */
 }
 
+ @media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .h1 {
+        font-size: 1.5rem;
+    }
+     .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
     
+ }   
     
+/* Tablets e celulares grandes */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    padding: 16px;
+  }
+  .sidebar, .main-content {
+    width: 100%;
+  }
+  .sidebar {
+    order: 2; /* se quiser que o conteúdo principal apareça primeiro */
+  }
+  .main-content {
+    order: 1;
+  }
+  .profile img {
+    width: 120px;
+    height: 120px;
+  }
+  .profile-picture {
+    position: static; /* evita sobreposição em telas pequenas */
+    margin: 0 auto 20px;
+    width: 140px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  body {
+    font-size: 0.95rem;
+  }
+  .profile img {
+    width: 100px;
+    height: 100px;
+  }
+  .skills li {
+    padding: 6px;
+    font-size: 14px;
+  }
+  .cat img {
+    width: 90px;
+  }
+}
 
     
